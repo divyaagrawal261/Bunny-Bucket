@@ -1,4 +1,4 @@
-# Planteria
+# Bunny-Bucket
 
 Bunny Bucket is a versatile to-do list application that empowers you to effortlessly enter and organize your upcoming tasks, while also providing a seamless experience for marking them as completed and removing them from the list.
 
