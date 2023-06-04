@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon-modified.ico" type="image/x-icon">
+    <title>Bunny Bucket</title>
+  </head>
+  <body onload="setTimeout(hide,1500)">
+    <!-- loader section -->
+    <div id="loader">
+      <center>
+      <img src="/loading_animation.gif" id="loading_animation"></img>
+      <h1>Loading...</h1>
+    </center>
+    </div>
+    <div id="main">
+    <center>
+      <div class="Top">
+        <h1 class="main_heading">Bunny Bucket</h1>
+        <a href="/details.html">
+          <div class="profile">
+            <br><br><br>
+            Bunny
+          </div></a> 
+        <input type="text" placeholder="Input your Task Here" id="Task" />
+        <button class="btn" onclick="Add_item()" id="Add">Add</button>
+      </div>
+      <ul id="main_list"></ul>
+      <script>
+        const input = document.getElementById("Task");
+        input.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("Add").click();
+            document.getElementById("Task").value = "";
+          }
+        });
+      </script>
+    </center>
+  </div>
+  <script>
+    var loader=document.getElementById("loader");
+    var main=document.getElementById("main");
+    function hide()
+    {
+      loader.style.display="none";
+      main.style.display="block";
+    }
+  </script>
+  </body>
+</html>
